@@ -1,0 +1,23 @@
+{
+    "skill_name": "mikado-agent",
+    "evals": [
+        {
+            "id": 1,
+            "prompt": "I need to extract our payment processing logic out of the OrderController into its own service with an IPaymentService interface. The code is in a C# solution at src/ECommerce.sln. The OrderController directly creates PaymentProcessor instances and calls methods on it in about 12 different places across 4 controllers. I want to be able to unit test payment logic independently and eventually support multiple payment providers.",
+            "expected_output": "Agent should run Phase 1 (assess), create session directory under doc/refactor/, verify baseline builds, create root node 0, attempt the naive change in a worktree, discover cascading CS0246/CS1061 breaks, cluster them into logical break nodes, fan out into each break, and produce a Mermaid mindmap with resolution order. Should produce 4-8 break nodes across 1-2 generations.",
+            "files": []
+        },
+        {
+            "id": 2,
+            "prompt": "We're migrating from Newtonsoft.Json to System.Text.Json across our entire backend solution. There are about 40 .cs files using JObject, JArray, JsonConvert, and custom JsonConverters. The solution is at src/Backend.sln. Can you map out all the breaking changes before we start?",
+            "expected_output": "Agent should identify this as a large cross-cutting refactoring suitable for Mikado. Should create session, attempt the naive change (swap the NuGet package), collect the resulting flood of CS0246 errors for missing Newtonsoft types, cluster them by pattern (JObject usages, JsonConvert calls, custom converter implementations), and build a multi-level graph. Should handle the high error volume gracefully (500+ errors) with pagination warning.",
+            "files": []
+        },
+        {
+            "id": 3,
+            "prompt": "I want to rename our Team class to Squad everywhere in the codebase. It's used in about 15 files across 3 projects. Should I use the Mikado method for this?",
+            "expected_output": "Agent should run Phase 1 and determine this is too small for the Mikado Method — a single rename across 15 files with no cascading architectural breaks. Should recommend doing it directly (IDE rename refactoring) rather than creating a full Mikado session. This tests the no-go decision path.",
+            "files": []
+        }
+    ]
+}

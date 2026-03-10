@@ -1,0 +1,17 @@
+# Virtual environments
+.venv/
+
+# Source material (copyrighted, not for distribution)
+*.pdf
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Worktrees created during Mikado sessions
+.worktrees/
+
+# Design/planning docs (internal notes, not part of the publishable skill)
+.github/prompts/
