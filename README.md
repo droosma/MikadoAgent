@@ -23,13 +23,13 @@ mindmap
 ## Installation
 
 ```bash
-npx skills add duncanroosma/mikado-agent
+npx skills add droosma/mikadoagent
 ```
 
 Or install globally for all projects:
 
 ```bash
-npx skills add duncanroosma/mikado-agent --global
+npx skills add droosma/mikadoagent --global
 ```
 
 Works with **40+ agents** including GitHub Copilot, Claude Code, OpenCode, Cursor, Windsurf, and more via the [Agent Skills spec](https://agentskills.io).
